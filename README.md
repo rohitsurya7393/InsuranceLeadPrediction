@@ -28,64 +28,40 @@ Ensure you have the following installed:
 - NumPy, Pandas, Scikit-learn
 - Pickle (for model saving/loading)
 
-Install dependencies using bash:
+## Install dependencies using bash:
 
-pip install flask numpy pandas scikit-learn
+- pip install flask numpy pandas scikit-learn
 
-## 🔹 Steps to Run
-Run Model Training
-First, train the ML models and save them as .pkl files:
-python train_models.py
-This will generate saved models in the models/ directory.
-Start the Web Application Navigate to the app directory and run:
-python app.py
-This will start a Flask server on http://127.0.0.1:5000/
-The terminal will display a localhost link.
-Access the Web App Open the provided localhost link in a browser. You can:
-Enter customer details.
-Select the ML model for prediction.
-Get instant results on whether the customer is a lead or not.
-
-## 🌍 How to Run the Website
-
-Ensure the Flask app is running (app.py).
-Open a web browser and go to:
-http://127.0.0.1:5000/
-Enter Data & Select Model:
-Fill in the customer details.
-Choose an ML model for prediction.
-Submit & Get Results:
-The website processes the input.
-The selected model predicts if the input qualifies as an insurance lead.
-Results are displayed on the result page.
+---
 
 ## 📊 Model Evaluation
 
-The following models were tested for accuracy and performance:
+- ** The following models were tested for accuracy and performance:
 
-Model	Accuracy
-Logistic Regression	76%
-Decision Tree	73.58%
-Random Forest	74.74%
-Neural Network	74.64%
-K-Nearest Neighbors (KNN)	74.7%
-Naïve Bayes	60.72%
-Linear Regression (for classification)	76.04%
-K-Means (unsupervised)	33.58%
-Evaluation metrics include:
+# Model	Accuracy
+- **Logistic Regression	76%
+- **Decision Tree	73.58%
+- **Random Forest	74.74%
+- **Neural Network	74.64%
+- **K-Nearest Neighbors (KNN)	74.7%
+- **Naïve Bayes	60.72%
+- **Linear Regression (for classification)	76.04%
+- **K-Means (unsupervised)	33.58%
 
-Accuracy, Precision, Recall, F1-Score
-Confusion Matrices
-Feature Importance Visualizations
+# Evaluation metrics include:
+
+- **Accuracy, Precision, Recall, F1-Score
+- **Confusion Matrices
+- **Feature Importance Visualizations
 
 ## 🔥 Future Enhancements
 
-Real-time Data Ingestion: Automate lead prediction using live data.
-CRM Integration: Connect with insurance CRM tools.
-Advanced Deep Learning Models: Improve prediction accuracy.
+- **Real-time Data Ingestion: Automate lead prediction using live data.
+- **CRM Integration: Connect with insurance CRM tools.
+- **Advanced Deep Learning Models: Improve prediction accuracy.
 
 ## 📜 References
 
-Flask Documentation: https://flask.palletsprojects.com
-Scikit-Learn: https://scikit-learn.org
-Pickle Module: https://docs.python.org/3/library/pickle.html
+- **Flask Documentation: https://flask.palletsprojects.com
+- **Scikit-Learn: https://scikit-learn.org
+- **Pickle Module: https://docs.python.org/3/library/pickle.html
