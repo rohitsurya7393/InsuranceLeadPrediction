@@ -36,32 +36,32 @@ Ensure you have the following installed:
 
 ## 📊 Model Evaluation
 
-- ** The following models were tested for accuracy and performance:
+- **The following models were tested for accuracy and performance:**
 
 # Model	Accuracy
-- **Logistic Regression	76%
-- **Decision Tree	73.58%
-- **Random Forest	74.74%
-- **Neural Network	74.64%
-- **K-Nearest Neighbors (KNN)	74.7%
-- **Naïve Bayes	60.72%
-- **Linear Regression (for classification)	76.04%
-- **K-Means (unsupervised)	33.58%
+- **Logistic Regression	76%**
+- **Decision Tree	73.58%**
+- **Random Forest	74.74%**
+- **Neural Network	74.64%**
+- **K-Nearest Neighbors (KNN)	74.7%**
+- **Naïve Bayes	60.72%**
+- **Linear Regression (for classification)	76.04%**
+- **K-Means (unsupervised)	33.58%**
 
 # Evaluation metrics include:
 
-- **Accuracy, Precision, Recall, F1-Score
-- **Confusion Matrices
-- **Feature Importance Visualizations
+- **Accuracy, Precision, Recall, F1-Score**
+- **Confusion Matrices**
+- **Feature Importance Visualizations**
 
 ## 🔥 Future Enhancements
 
-- **Real-time Data Ingestion: Automate lead prediction using live data.
-- **CRM Integration: Connect with insurance CRM tools.
-- **Advanced Deep Learning Models: Improve prediction accuracy.
+- **Real-time Data Ingestion: Automate lead prediction using live data.**
+- **CRM Integration: Connect with insurance CRM tools.**
+- **Advanced Deep Learning Models: Improve prediction accuracy.**
 
 ## 📜 References
 
-- **Flask Documentation: https://flask.palletsprojects.com
-- **Scikit-Learn: https://scikit-learn.org
-- **Pickle Module: https://docs.python.org/3/library/pickle.html
+- **Flask Documentation: https://flask.palletsprojects.com**
+- **Scikit-Learn: https://scikit-learn.org**
+- **Pickle Module: https://docs.python.org/3/library/pickle.html**
