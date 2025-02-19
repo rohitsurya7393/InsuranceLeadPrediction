@@ -28,11 +28,11 @@ Ensure you have the following installed:
 - NumPy, Pandas, Scikit-learn
 - Pickle (for model saving/loading)
 
-Install dependencies using:
-```bash
+Install dependencies using bash:
+
 pip install flask numpy pandas scikit-learn
 
-🔹 Steps to Run
+## 🔹 Steps to Run
 Run Model Training
 First, train the ML models and save them as .pkl files:
 python train_models.py
@@ -45,7 +45,8 @@ Access the Web App Open the provided localhost link in a browser. You can:
 Enter customer details.
 Select the ML model for prediction.
 Get instant results on whether the customer is a lead or not.
-🌍 How to Run the Website
+
+## 🌍 How to Run the Website
 
 Ensure the Flask app is running (app.py).
 Open a web browser and go to:
@@ -57,7 +58,8 @@ Submit & Get Results:
 The website processes the input.
 The selected model predicts if the input qualifies as an insurance lead.
 Results are displayed on the result page.
-📊 Model Evaluation
+
+## 📊 Model Evaluation
 
 The following models were tested for accuracy and performance:
 
@@ -75,12 +77,14 @@ Evaluation metrics include:
 Accuracy, Precision, Recall, F1-Score
 Confusion Matrices
 Feature Importance Visualizations
-🔥 Future Enhancements
+
+## 🔥 Future Enhancements
 
 Real-time Data Ingestion: Automate lead prediction using live data.
 CRM Integration: Connect with insurance CRM tools.
 Advanced Deep Learning Models: Improve prediction accuracy.
-📜 References
+
+## 📜 References
 
 Flask Documentation: https://flask.palletsprojects.com
 Scikit-Learn: https://scikit-learn.org
