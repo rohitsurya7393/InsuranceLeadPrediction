@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Model Results</title>
+    <style>
+        body {
+            background-color: #f4f4f9;
+            color: #333;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .container {
+            width: 80%;
+            max-width: 600px;
+            padding: 20px;
+            background-color: white;
+            box-shadow: 0 0 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        .lead {
+            color: green;
+        }
+        .non-lead {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Results</h1>
+        {% for model_name, (prediction, accuracy) in results.items() %}
+            <p><strong>{{ model_name }}:</strong> Prediction: {{ prediction }}, Accuracy: {{ accuracy | round(2) }}%</p>
+            {% if prediction == 1 %}
+                <p class="lead">This is an insurance lead.</p>
+            {% else %}
+                <p class="non-lead">This is not an insurance lead.</p>
+            {% endif %}
+        {% endfor %}
+        <a href="/">Try Again</a>
+    </div>
+</body>
+</html>

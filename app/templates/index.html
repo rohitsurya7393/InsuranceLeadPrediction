@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project Phase 3</title>
+    <style>
+        body {
+            background-size:auto;
+            color: white;
+            display:contents;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            
+            width: 50%;
+            background: rgba(0, 0, 0, 0.8);
+            padding: 50px; 
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+            
+        }
+
+        h1 {
+            text-align: center;
+            color: #f0f0f0;
+            margin-bottom: 20px; 
+        }
+
+        .input-group {
+            margin: 10px 0;
+            display: grid;
+            grid-template-columns: 1fr 3fr auto; 
+            align-items: center;
+            gap: 10px;
+        }
+
+        label {
+            white-space: nowrap;
+        }
+
+        input[type="text"], select {
+            
+            width: 40%; 
+            padding: 8px;
+            margin: 6px 0;
+        }
+
+        button {
+            display: block;
+            width: 100%;
+            padding: 10px;
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background-color: #45a049;
+        }
+
+        .info-icon {
+            cursor: pointer;
+            color: #ccc;
+            text-align: center;
+            position: relative; 
+        }
+
+        .info-icon:hover::after {
+            content: attr(title);
+            position: absolute;
+            white-space: nowrap;
+            background-color: #333;
+            color: white;
+            text-align: center;
+            border-radius: 6px;
+            padding: 5px 10px;
+            bottom: 20px; 
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 1;
+            opacity: 0.9;
+            display: block; 
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1></h1>
+        <h1>Insurance Lead Prediction</h1>
+        <form action="/predict" method="post">
+            
+            <div class="input-group">
+                <label for="value1">City_Code_encoded</label>
+                <input type="text" id="value1" name="value1" required placeholder="Enter City Code ranges from 1 - 35">
+                <i class="info-icon" title="Enter numeric region code">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value2">Region_Code</label>
+                <input type="text" id="value2" name="value2" required placeholder="Enter Region Code ranges from 1 - 35">
+                <i class="info-icon" title="Enter numeric region code">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value3">Accomodation_Type</label>
+                <select id="value3" name="value3" required>
+                    <option value="">select type</option>
+                    
+                    <option value="0">Rented</option>
+                    <option value="1">Owned</option>
+                    
+                </select>
+                <i class="info-icon" title="0 for Rented 1 for Owned">i</i>
+            </div>
+            
+
+            <div class="input-group">
+                <label for="value4">Reco_Insurance_Type</label>
+                <select id="value4" name="value4" required>
+                    <option value="">select type</option>
+                    <option value="0">Individual</option>
+                    <option value="1">Join</option>
+                </select>
+                <i class="info-icon" title="0 for Individual 1 for Joint">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value5">Upper_Age</label>
+                <input type="text" id="value5" name="value5" required placeholder="Enter upper age">
+                <i class="info-icon" title="Enter upper age">i</i>
+            </div>
+            
+            <div class="input-group">
+                <label for="value6">Lower_Age</label>
+                <input type="text" id="value6" name="value6" required placeholder="Enter Lower age">
+                <i class="info-icon" title="Enter Lower age">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value7">Is_Spouse</label>
+                <select id="value7" name="value7" required>
+                    <option value="">select type</option>
+                    
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    
+                </select>
+                <i class="info-icon" title="0 for no 1 for yes">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value8">Holding_Policy_Duration</label>
+                <input type="text" id="value8" name="value8" required placeholder="enter holding policy duration">
+                <i class="info-icon" title="No of years holding policy">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value9">Holding_Policy_Type</label>
+                <select id="value9" name="value9" required>
+                    <option value="">select type</option>
+                    
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    
+                </select>
+                <i class="info-icon" title="Select type of holding Policy">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value10">Reco_Policy_Cat</label>
+                <input type="text" id="value10" name="value10" required placeholder="Enter Reco Policy Category">
+                <i class="info-icon" title="The Category of Reco policy ranges from 1 to 25">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value11">Reco_Policy_Premium</label>
+                <input type="text" id="value11" name="value11" required placeholder="Reco_Policy_Premium">
+                <i class="info-icon" title="Enter the amount of Policy premium">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value12">HI__X1</label>
+                <select id="value12" name="value12" required>
+                    <option value="">select type</option>
+                    
+                    <option value="0">0</option>
+                    <option value="1">1</option>
+                    
+                </select>
+                <i class="info-icon" title="0 for no and 1 for yes">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value13">HI__X2</label>
+                <select id="value13" name="value13" required>
+                    <option value="">select type</option>
+                    
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    
+                </select>
+                <i class="info-icon" title="0 for no and 1 for yes">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value14">HI__X3</label>
+                <select id="value14" name="value14" required>
+                    <option value="">select type</option>
+                    
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    
+                </select>
+                <i class="info-icon" title="0 for no and 1 for yes">i</i>
+            </div>
+
+
+            <div class="input-group">
+                <label for="value15">HI__X4</label>
+                <select id="value15" name="value15" required>
+                    <option value="">select type</option>
+                    
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    
+                </select>
+                <i class="info-icon" title="0 for no and 1 for yes">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value16">HI__X5</label>
+                <select id="value16" name="value16" required>
+                    <option value="">select type</option>
+                    
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    
+                </select>
+                <i class="info-icon" title="0 for no and 1 for yes">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value17">HI__X6</label>
+                <select id="value17" name="value17" required>
+                    <option value="">select type</option>
+                    
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    
+                </select>
+                <i class="info-icon" title="0 for no and 1 for yes">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value18">HI__X7</label>
+                <select id="value18" name="value18" required>
+                    <option value="">select type</option>
+                    
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                    
+                </select>
+                <i class="info-icon" title="0 for no and 1 for yes">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value19">HI__X8</label>
+                <select id="value19" name="value19" required>
+                    <option value="">select type</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <i class="info-icon" title="0 for no and 1 for yes">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value20">HI__X9</label>
+                <select id="value20" name="value20" required>
+                    <option value="">select type</option>
+                    <option value="0">No</option>
+                    <option value="1">Yes</option>
+                </select>
+                <i class="info-icon" title="0 for no and 1 for yes">i</i>
+            </div>
+
+            <div class="input-group">
+                <label for="value21">Machine Learning Model</label>
+                <select id="value21" name="value21" required>
+                    <option value="">select type</option>
+                    <option value="Decision Tree">Decision Tree</option>
+                    <option value="K Means">K Means</option>
+                    <option value="KNN">KNN</option>
+                    <option value="Logistic">Logistic</option>
+                    <option value="Naive Bayes">Naive Bayes</option>
+                    <option value="Neural Network">Neural Network</option>
+                    <option value="Random Forest">Random Forest</option>
+                </select>
+                <i class="info-icon" title="Select the model which you want to test">i</i>
+            </div>
+
+            <button type="submit">Predict</button>
+        </form>
+    </div>
+</body>
+</html>
